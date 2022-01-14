@@ -18,7 +18,7 @@ describe('caching token list provider', () => {
     mockCache = sinon.createStubInstance(NodeJSCache);
 
     cachingTokenListProvider = await CachingTokenListProvider.fromTokenList(
-      ChainId.MAINNET,
+      ChainId.POLYGON_MUMBAI,
       mockTokenList,
       mockCache
     );

@@ -39,6 +39,10 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
     'https://api.thegraph.com/subgraphs/name/ianlapham/uniswapv2',
   [ChainId.RINKEBY]:
     'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v2-rinkeby',
+  [ChainId.POLYGON]:
+    'https://api.thegraph.com/subgraphs/name/noahgenesis/genesis',
+  [ChainId.POLYGON_MUMBAI]:
+    'https://api.thegraph.com/subgraphs/name/noahgenesis/genesis',
 };
 
 const threshold = 0.025;
@@ -75,6 +79,7 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
     this.client = new GraphQLClient(subgraphUrl);
   }
 
+  // This is the root of all evil.
   public async getPools(
     _tokenIn?: Token,
     _tokenOut?: Token,

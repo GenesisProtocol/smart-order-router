@@ -1,4 +1,8 @@
-import { CondensedAddLiquidityOptions, Trade } from '@uniswap/router-sdk';
+import {
+  CondensedAddLiquidityOptions,
+  Trade,
+} from '@genesisprotocol/router-sdk';
+import { Route as V2RouteRaw } from '@genesisprotocol/sdk';
 import {
   Currency,
   Fraction,
@@ -6,7 +10,6 @@ import {
   Token,
   TradeType,
 } from '@uniswap/sdk-core';
-import { Route as V2RouteRaw } from '@uniswap/v2-sdk';
 import {
   MethodParameters,
   Pool,

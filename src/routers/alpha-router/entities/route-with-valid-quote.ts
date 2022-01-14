@@ -1,4 +1,4 @@
-import { Protocol } from '@uniswap/router-sdk';
+import { Protocol } from '@genesisprotocol/router-sdk';
 import { Token, TradeType } from '@uniswap/sdk-core';
 import { BigNumber } from 'ethers';
 import _ from 'lodash';

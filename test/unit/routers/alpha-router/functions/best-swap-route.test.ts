@@ -1,5 +1,5 @@
+import { Pair } from '@genesisprotocol/sdk';
 import { Fraction, TradeType } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
 import { Pool } from '@uniswap/v3-sdk';
 import { BigNumber } from 'ethers';
 import JSBI from 'jsbi';

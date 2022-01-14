@@ -1,4 +1,4 @@
-import { Protocol } from '@uniswap/router-sdk';
+import { Protocol } from '@genesisprotocol/router-sdk';
 import { Token, TradeType } from '@uniswap/sdk-core';
 import { FeeAmount } from '@uniswap/v3-sdk';
 import _ from 'lodash';
@@ -574,6 +574,8 @@ export async function getV2CandidatePools({
   const allPoolsRaw = await subgraphProvider.getPools(tokenIn, tokenOut, {
     blockNumber,
   });
+
+  console.log('ALL POOLS RAW', allPoolsRaw);
 
   const allPools = _.map(allPoolsRaw, (pool) => {
     return {

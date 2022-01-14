@@ -1,6 +1,6 @@
+import { Pair } from '@genesisprotocol/sdk';
 import { Token } from '@uniswap/sdk-core';
 import { TokenList } from '@uniswap/token-lists';
-import { Pair } from '@uniswap/v2-sdk';
 import { encodeSqrtRatioX96, FeeAmount, Pool } from '@uniswap/v3-sdk';
 import { BigNumber } from 'ethers';
 import _ from 'lodash';

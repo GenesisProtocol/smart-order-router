@@ -1,6 +1,6 @@
-import { Protocol, SwapRouter } from '@uniswap/router-sdk';
+import { Protocol, SwapRouter } from '@genesisprotocol/router-sdk';
+import { Pair } from '@genesisprotocol/sdk';
 import { Fraction, Percent, TradeType } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
 import { encodeSqrtRatioX96, Pool, Position } from '@uniswap/v3-sdk';
 import { BigNumber, providers } from 'ethers';
 import JSBI from 'jsbi';
@@ -314,7 +314,7 @@ describe('alpha router', () => {
     });
 
     alphaRouter = new AlphaRouter({
-      chainId: 1,
+      chainId: 80001,
       provider: mockProvider,
       multicall2Provider: mockMulticallProvider as any,
       v3SubgraphProvider: mockV3SubgraphProvider,

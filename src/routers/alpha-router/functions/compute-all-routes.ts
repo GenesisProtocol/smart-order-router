@@ -1,5 +1,5 @@
+import { Pair } from '@genesisprotocol/sdk';
 import { Token } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
 import { Pool } from '@uniswap/v3-sdk';
 import { log } from '../../../util/log';
 import { routeToString } from '../../../util/routes';
@@ -39,6 +39,8 @@ export function computeAllV2Routes(
   );
 }
 
+// This is the function responsible for computing all routes, if a route for a given swap is not found
+// then this is the function where the error originates.
 export function computeAllRoutes<
   TPool extends Pair | Pool,
   TRoute extends V3Route | V2Route

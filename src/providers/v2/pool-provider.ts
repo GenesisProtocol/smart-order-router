@@ -1,5 +1,5 @@
+import { Pair } from '@genesisprotocol/sdk';
 import { Token } from '@uniswap/sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
 import { default as AsyncRetry, default as retry } from 'async-retry';
 import { BigNumber } from 'ethers';
 import _ from 'lodash';

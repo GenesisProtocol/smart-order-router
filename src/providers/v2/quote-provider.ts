@@ -1,8 +1,8 @@
-import { TradeType } from '@uniswap/sdk-core';
 import {
   InsufficientInputAmountError,
   InsufficientReservesError,
-} from '@uniswap/v2-sdk';
+} from '@genesisprotocol/sdk';
+import { TradeType } from '@uniswap/sdk-core';
 import { BigNumber } from 'ethers';
 import { V2Route } from '../../routers/router';
 import { CurrencyAmount } from '../../util/amounts';

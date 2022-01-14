@@ -357,10 +357,10 @@ export const USDC_POLYGON_MUMBAI = new Token(
 
 export const DAI_POLYGON_MUMBAI = new Token(
   ChainId.POLYGON_MUMBAI,
-  '0x001b3b4d0f3714ca98ba10f6042daebf0b1b7b6f',
+  '0xc00f6b6414289283f9942a32eb0c6c15db63aeb8',
   18,
   'DAI',
-  'Dai Stablecoin'
+  'Dai'
 );
 
 export const WETH_POLYGON_MUMBAI = new Token(

@@ -1,8 +1,8 @@
+import { Protocol, SwapRouter, Trade } from '@genesisprotocol/router-sdk';
+import { Route as V2RouteRaw } from '@genesisprotocol/sdk';
 import DEFAULT_TOKEN_LIST from '@uniswap/default-token-list';
-import { Protocol, SwapRouter, Trade } from '@uniswap/router-sdk';
 import { Currency, Fraction, Token, TradeType } from '@uniswap/sdk-core';
 import { TokenList } from '@uniswap/token-lists';
-import { Route as V2RouteRaw } from '@uniswap/v2-sdk';
 import {
   MethodParameters,
   Pool,
@@ -804,6 +804,7 @@ export class AlphaRouter
       allCandidatePools = [...allCandidatePools, candidatePools];
     }
 
+    // THE PROBLEM IS HERE
     if (allRoutesWithValidQuotes.length == 0) {
       log.info({ allRoutesWithValidQuotes }, 'Received no valid quotes');
       return null;
@@ -1047,6 +1048,7 @@ export class AlphaRouter
       maxSwapsPerPath
     );
 
+    // ROOT SO FAR
     if (routes.length == 0) {
       return { routesWithValidQuotes: [], candidatePools };
     }
