@@ -47,7 +47,9 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
 
 const threshold = 0.025;
 
-const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.
+const PAGE_SIZE = 50;
+
+const BLOCK_NUMBER_OFFSET = 2;
 
 /**
  * Provider for getting V2 pools from the Subgraph
@@ -69,7 +71,7 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private retries = 2,
-    private timeout = 360000,
+    private timeout = 36000,
     private rollback = true
   ) {
     const subgraphUrl = SUBGRAPH_URL_BY_CHAIN[this.chainId];
@@ -93,7 +95,11 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
       query getPools($pageSize: Int!, $id: String) {
         pairs(
           first: $pageSize
-          ${blockNumber ? `block: { number: ${blockNumber} }` : ``}
+          ${
+            blockNumber
+              ? `block: { number: ${blockNumber - BLOCK_NUMBER_OFFSET} }`
+              : ``
+          }
           where: { id_gt: $id }
         ) {
           id

@@ -575,8 +575,6 @@ export async function getV2CandidatePools({
     blockNumber,
   });
 
-  console.log('ALL POOLS RAW', allPoolsRaw);
-
   const allPools = _.map(allPoolsRaw, (pool) => {
     return {
       ...pool,
