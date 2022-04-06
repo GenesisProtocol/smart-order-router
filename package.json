@@ -26,7 +26,7 @@
     "prepare-release": "run-s cov:check doc:html version doc:publish",
     "test": "jest",
     "integ-test": "jest test/integ",
-    "deploy": "npm i && npm run build && npm version patch --force && npm run publish --access public"
+    "deploy": "npm i && npm run build && npm version patch --force && npm publish --access public"
   },
   "engines": {
     "node": ">=10"
