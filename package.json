@@ -1,6 +1,6 @@
 {
   "name": "@genesisprotocol/smart-order-router",
-  "version": "2.5.18",
+  "version": "2.5.20",
   "description": "Genesis Smart Order Router",
   "main": "build/main/src/index.js",
   "typings": "build/main/src/index.d.ts",
@@ -25,7 +25,8 @@
     "version": "standard-version",
     "prepare-release": "run-s cov:check doc:html version doc:publish",
     "test": "jest",
-    "integ-test": "jest test/integ"
+    "integ-test": "jest test/integ",
+    "deploy": "npm i && npm run build && npm version patch --force && npm run publish --access public"
   },
   "engines": {
     "node": ">=10"
