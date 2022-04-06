@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.29](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.26...v2.5.29) (2022-04-06)
+
 ### [2.5.27](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.24...v2.5.27) (2022-04-06)
 
 ### [2.5.25](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.9...v2.5.25) (2022-04-06)
