@@ -11,6 +11,8 @@ export enum ChainId {
   ARBITRUM_RINKEBY = 421611,
   POLYGON = 137,
   POLYGON_MUMBAI = 80001,
+  AVALANCHE = 43114,
+  AVALANCHE_FUJI = 43113,
 }
 
 export const ID_TO_CHAIN_ID = (id: number): ChainId => {
@@ -29,6 +31,10 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.OPTIMISM;
     case 69:
       return ChainId.OPTIMISTIC_KOVAN;
+    case 43114:
+      return ChainId.AVALANCHE;
+    case 43113:
+      return ChainId.AVALANCHE_FUJI;
     case 42161:
       return ChainId.ARBITRUM_ONE;
     case 421611:
@@ -55,12 +61,15 @@ export enum ChainName {
   ARBITRUM_RINKEBY = 'arbitrum-rinkeby',
   POLYGON = 'polygon-mainnet',
   POLYGON_MUMBAI = 'polygon-mumbai',
+  AVALANCHE = 'avalanche',
+  AVALANCHE_FUJI = 'avalanche-fuji',
 }
 
 export enum NativeCurrencyName {
   // Strings match input for CLI
   ETHER = 'ETH',
   MATIC = 'MATIC',
+  AVAX = 'AVAX',
 }
 
 export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
@@ -75,6 +84,8 @@ export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
   [ChainId.ARBITRUM_RINKEBY]: NativeCurrencyName.ETHER,
   [ChainId.POLYGON]: NativeCurrencyName.MATIC,
   [ChainId.POLYGON_MUMBAI]: NativeCurrencyName.MATIC,
+  [ChainId.AVALANCHE]: NativeCurrencyName.AVAX,
+  [ChainId.AVALANCHE_FUJI]: NativeCurrencyName.AVAX,
 };
 
 export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
@@ -93,6 +104,10 @@ export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
       return ChainName.OPTIMISM;
     case 69:
       return ChainName.OPTIMISTIC_KOVAN;
+    case 43114:
+      return ChainName.AVALANCHE;
+    case 43113:
+      return ChainName.AVALANCHE_FUJI;
     case 42161:
       return ChainName.ARBITRUM_ONE;
     case 421611:
@@ -216,6 +231,20 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     18,
     'WMATIC',
     'Wrapped MATIC'
+  ),
+  [ChainId.AVALANCHE]: new Token(
+    ChainId.AVALANCHE,
+    '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
+    18,
+    'WAVAX',
+    'Wrapped AVAX'
+  ),
+  [ChainId.AVALANCHE_FUJI]: new Token(
+    ChainId.AVALANCHE_FUJI,
+    '0x3bfdfe468d59428273d450224bc36114c3e28490',
+    18,
+    'WAVAX',
+    'Wrapped AVAX'
   ),
 };
 
