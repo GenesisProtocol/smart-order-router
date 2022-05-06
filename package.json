@@ -1,6 +1,6 @@
 {
   "name": "@genesisprotocol/smart-order-router",
-  "version": "2.5.34",
+  "version": "2.5.36",
   "description": "Genesis Smart Order Router",
   "main": "build/main/src/index.js",
   "typings": "build/main/src/index.d.ts",
@@ -34,7 +34,7 @@
   "dependencies": {
     "@bitauth/libauth": "^1.17.1",
     "@ethersproject/bignumber": "^5.1.1",
-    "@genesisprotocol/helpers": "^0.1.62",
+    "@genesisprotocol/helpers": "^0.1.64",
     "@genesisprotocol/router-sdk": "^1.0.33",
     "@genesisprotocol/sdk": "^3.0.38",
     "@oclif/command": "^1.8.0",
