@@ -32,18 +32,18 @@ export type TokenAccessor = {
   getAllTokens: () => Token[];
 };
 
-export const WAVAX_FUJI = new Token(
+export const WAVAX_AVALANCHE_FUJI = new Token(
   ChainId.AVALANCHE_FUJI,
-  getAddress({ name: 'WrappedAvax', chain: ChainId.AVALANCHE_FUJI }),
+  getAddress({ name: 'WrappedAvax', chain: ChainId.AVALANCHE_FUJI }) || '',
   18,
   'WAVAX',
   'Wrapped Avax',
 )
 
-export const WAVAX_AVAX = new Token(
+export const WAVAX_AVALANCHE = new Token(
   ChainId.AVALANCHE_FUJI,
   // TODO: Change this to use avax mainnet address
-  getAddress({ name: 'WrappedAvax', chain: ChainId.AVALANCHE_FUJI }),
+  getAddress({ name: 'WrappedAvax', chain: ChainId.AVALANCHE_FUJI }) || '',
   18,
   'WAVAX',
   'Wrapped Avax',
