@@ -40,6 +40,8 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.OPTIMISTIC_KOVAN]: [],
   [ChainId.POLYGON]: [],
   [ChainId.POLYGON_MUMBAI]: [],
+  [ChainId.AVALANCHE]: [],
+  [ChainId.AVALANCHE_FUJI]: [],
 };
 
 /**

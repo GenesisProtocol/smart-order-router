@@ -17,7 +17,8 @@ export const MULTICALL2_ADDRESS = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696';
 export const WETH9: {
   [chainId in Exclude<
     ChainId,
-    ChainId.POLYGON | ChainId.POLYGON_MUMBAI
+    ChainId.POLYGON | ChainId.POLYGON_MUMBAI | ChainId.AVALANCHE |
+    ChainId.AVALANCHE_FUJI
   >]: Token;
 } = {
   [ChainId.MAINNET]: new Token(

@@ -55,6 +55,10 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
     'https://api.thegraph.com/subgraphs/name/ianlapham/arbitrum-minimal',
   [ChainId.POLYGON]:
     'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-polygon',
+  [ChainId.AVALANCHE]:
+    'https://api.thegraph.com/subgraphs/name/genesisprotocol/genesis-exchange-fuji',
+  [ChainId.AVALANCHE_FUJI]:
+    'https://api.thegraph.com/subgraphs/name/genesisprotocol/genesis-exchange-fuji',
 };
 
 const PAGE_SIZE = 1000; // 1k is max possible query size from subgraph.

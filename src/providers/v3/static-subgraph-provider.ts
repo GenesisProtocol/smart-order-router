@@ -121,6 +121,8 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     WRAPPED_NATIVE_CURRENCY[ChainId.POLYGON_MUMBAI]!,
     WMATIC_POLYGON_MUMBAI,
   ],
+  [ChainId.AVALANCHE]: [],
+  [ChainId.AVALANCHE_FUJI]: [],
 };
 
 /**

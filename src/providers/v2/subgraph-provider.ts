@@ -43,6 +43,10 @@ const SUBGRAPH_URL_BY_CHAIN: { [chainId in ChainId]?: string } = {
     'https://api.thegraph.com/subgraphs/name/noahgenesis/genesis',
   [ChainId.POLYGON_MUMBAI]:
     'https://api.thegraph.com/subgraphs/name/noahgenesis/genesis',
+  [ChainId.AVALANCHE]:
+    'https://api.thegraph.com/subgraphs/name/genesisprotocol/genesis-exchange-fuji',
+  [ChainId.AVALANCHE_FUJI]:
+    'https://api.thegraph.com/subgraphs/name/genesisprotocol/genesis-exchange-fuji',
 };
 
 const threshold = 0.025;

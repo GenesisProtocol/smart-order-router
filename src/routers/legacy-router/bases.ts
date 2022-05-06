@@ -7,6 +7,8 @@ import {
   WBTC_MAINNET,
   WMATIC_POLYGON,
   WMATIC_POLYGON_MUMBAI,
+  WAVAX_AVALANCHE_FUJI,
+  WAVAX_AVALANCHE,
 } from '../../providers/token-provider';
 import { ChainId, WRAPPED_NATIVE_CURRENCY } from '../../util/chains';
 
@@ -39,6 +41,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST = (
     ],
     [ChainId.POLYGON]: [WMATIC_POLYGON],
     [ChainId.POLYGON_MUMBAI]: [WMATIC_POLYGON_MUMBAI],
+    [ChainId.AVALANCHE]: [WAVAX_AVALANCHE_FUJI],
+    [ChainId.AVALANCHE_FUJI]: [WAVAX_AVALANCHE],
   };
 };
 

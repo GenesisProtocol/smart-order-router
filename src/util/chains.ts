@@ -149,6 +149,10 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
       return process.env.JSON_RPC_PROVIDER_POLYGON!;
     case ChainId.POLYGON_MUMBAI:
       return process.env.JSON_RPC_PROVIDER_POLYGON_MUMBAI!;
+    case ChainId.AVALANCHE:
+      return process.env.JSON_RPC_PROVIDER_AVALANCHE!;
+    case ChainId.AVALANCHE_FUJI:
+      return process.env.JSON_RPC_PROVIDER_AVALANCHE_FUJI!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
   }

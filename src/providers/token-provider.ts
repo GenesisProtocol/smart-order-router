@@ -1,4 +1,5 @@
 import { Token } from '@uniswap/sdk-core';
+import { getAddress } from '@genesisprotocol/helpers'
 import _ from 'lodash';
 import { IERC20Metadata__factory } from '../types/v3';
 import { ChainId, log, WRAPPED_NATIVE_CURRENCY } from '../util';
@@ -30,6 +31,23 @@ export type TokenAccessor = {
   getTokenBySymbol(symbol: string): Token | undefined;
   getAllTokens: () => Token[];
 };
+
+export const WAVAX_FUJI = new Token(
+  ChainId.AVALANCHE_FUJI,
+  getAddress({ name: 'WrappedAvax', chain: ChainId.AVALANCHE_FUJI }),
+  18,
+  'WAVAX',
+  'Wrapped Avax',
+)
+
+export const WAVAX_AVAX = new Token(
+  ChainId.AVALANCHE_FUJI,
+  // TODO: Change this to use avax mainnet address
+  getAddress({ name: 'WrappedAvax', chain: ChainId.AVALANCHE_FUJI }),
+  18,
+  'WAVAX',
+  'Wrapped Avax',
+)
 
 // Some well known tokens on each chain for seeding cache / testing.
 export const USDC_MAINNET = new Token(

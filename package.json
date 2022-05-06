@@ -34,6 +34,7 @@
   "dependencies": {
     "@bitauth/libauth": "^1.17.1",
     "@ethersproject/bignumber": "^5.1.1",
+    "@genesisprotocol/helpers": "^0.1.62",
     "@genesisprotocol/router-sdk": "^1.0.33",
     "@genesisprotocol/sdk": "^3.0.38",
     "@oclif/command": "^1.8.0",
