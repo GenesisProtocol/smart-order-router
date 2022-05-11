@@ -49,6 +49,21 @@ export const WAVAX_AVALANCHE = new Token(
   'Wrapped Avax',
 )
 
+export const DAI_FUJI = new Token(
+  ChainId.AVALANCHE_FUJI,
+  getAddress({ name: 'Dai', chain: ChainId.AVALANCHE_FUJI }) || '',
+  18,
+  'DAI',
+  'Dai Stablecoin'
+);
+
+export const DAI_AVALANCHE = new Token(
+  ChainId.AVALANCHE,
+  getAddress({ name: 'Dai', chain: ChainId.AVALANCHE_FUJI }) || '',
+  18,
+  'DAI',
+  'Dai Stablecoin'
+);
 // Some well known tokens on each chain for seeding cache / testing.
 export const USDC_MAINNET = new Token(
   ChainId.MAINNET,

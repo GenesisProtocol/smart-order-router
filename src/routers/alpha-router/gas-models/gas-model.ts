@@ -12,6 +12,8 @@ import {
   DAI_RINKEBY_1,
   DAI_RINKEBY_2,
   DAI_ROPSTEN,
+  DAI_FUJI,
+  DAI_AVALANCHE,
   USDC_ARBITRUM,
   USDC_GÖRLI,
   USDC_KOVAN,
@@ -56,6 +58,8 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.ROPSTEN]: [DAI_ROPSTEN, USDC_ROPSTEN, USDT_ROPSTEN],
   [ChainId.POLYGON]: [USDC_POLYGON],
   [ChainId.POLYGON_MUMBAI]: [DAI_POLYGON_MUMBAI],
+  [ChainId.AVALANCHE_FUJI]: [DAI_FUJI],
+  [ChainId.AVALANCHE]: [DAI_AVALANCHE],
 };
 
 /**

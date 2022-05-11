@@ -804,7 +804,6 @@ export class AlphaRouter
       allCandidatePools = [...allCandidatePools, candidatePools];
     }
 
-    // THE PROBLEM IS HERE
     if (allRoutesWithValidQuotes.length == 0) {
       log.info({ allRoutesWithValidQuotes }, 'Received no valid quotes');
       return null;
