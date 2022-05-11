@@ -44,7 +44,7 @@ export class UniswapMulticallProvider extends IMulticallProvider<UniswapMultical
     protected chainId: ChainId,
     protected provider: providers.BaseProvider,
     protected gasLimitPerCall = 1_000_000,
-    protected multicallAddressOverride = UNISWAP_MULTICALL_ADDRESS
+    protected multicallAddressOverride = getAddress({ name: 'InterfaceMulticall' })
   ) {
     super();
     const multicallAddress = multicallAddressOverride
@@ -95,8 +95,6 @@ export class UniswapMulticallProvider extends IMulticallProvider<UniswapMultical
         gasLimit: this.gasLimitPerCall,
       };
     });
-
-    console.log('CALL BEING MADE TO INTERFACE MULTICALL: ', calls)
 
     log.debug(
       { calls },
