@@ -12,6 +12,7 @@ import {
   IMulticallProvider,
   Result,
 } from './multicall-provider';
+import { getAddress } from '@genesisprotocol/helpers'
 
 export type UniswapMulticallConfig = {
   gasLimitPerCallOverride?: number;
@@ -23,6 +24,8 @@ const contractAddressByChain: { [chainId in ChainId]?: string } = {
   [ChainId.KOVAN]: UNISWAP_MULTICALL_ADDRESS,
   [ChainId.ROPSTEN]: UNISWAP_MULTICALL_ADDRESS,
   [ChainId.GÖRLI]: UNISWAP_MULTICALL_ADDRESS,
+  [ChainId.AVALANCHE_FUJI]: getAddress({ name: 'InterfaceMulticall' }),
+  [ChainId.AVALANCHE]: getAddress({ name: 'InterfaceMulticall' }),
 };
 
 /**
@@ -92,6 +95,8 @@ export class UniswapMulticallProvider extends IMulticallProvider<UniswapMultical
         gasLimit: this.gasLimitPerCall,
       };
     });
+
+    console.log('CALL BEING MADE TO INTERFACE MULTICALL: ', calls)
 
     log.debug(
       { calls },
