@@ -1,6 +1,6 @@
 {
   "name": "@genesisprotocol/smart-order-router",
-  "version": "2.5.49",
+  "version": "2.5.51",
   "description": "Genesis Smart Order Router",
   "main": "build/main/src/index.js",
   "typings": "build/main/src/index.d.ts",
