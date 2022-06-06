@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.5.55](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.9...v2.5.55) (2022-06-06)
+
+
+### Bug Fixes
+
+* add stables to avax ([07fa036](https://github.com/GenesisProtocol/smart-order-router/commit/07fa036eb46b06b0b83b25e3a383a456b5bd78cb))
+
+### [2.5.53](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.9...v2.5.53) (2022-06-06)
+
+
+### Bug Fixes
+
+* add stables to avax ([07fa036](https://github.com/GenesisProtocol/smart-order-router/commit/07fa036eb46b06b0b83b25e3a383a456b5bd78cb))
+
 ### [2.5.51](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.48...v2.5.51) (2022-05-11)
 
 ### [2.5.49](https://github.com/GenesisProtocol/smart-order-router/compare/v2.5.46...v2.5.49) (2022-05-11)
